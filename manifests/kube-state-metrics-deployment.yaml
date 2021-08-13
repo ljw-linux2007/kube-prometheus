@@ -31,7 +31,7 @@ spec:
         - --port=8081
         - --telemetry-host=127.0.0.1
         - --telemetry-port=8082
-        image: swr.cn-north-4.myhuaweicloud.com/rpg/prometheus-k8s1.21:kube-state-metrics_v2.0.0
+        image: swr.cn-north-4.myhuaweicloud.com/rpg/prometheus-k8s1.21:kube-state-metrics_v2.0.0-beta
         name: kube-state-metrics
         resources:
           limits:
