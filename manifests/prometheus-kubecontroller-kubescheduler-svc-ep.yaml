@@ -4,7 +4,7 @@ metadata:
   namespace: kube-system
   name: kube-controller-manager
   labels:
-    k8s-app: kube-controller-manager
+    app.kubernetes.io/name: kube-controller-manager
 spec:
   selector:
     component: kube-controller-manager
@@ -20,7 +20,7 @@ metadata:
   namespace: kube-system
   name: kube-scheduler
   labels:
-    k8s-app: kube-scheduler
+    app.kubernetes.io/name: kube-scheduler
 spec:
   selector:
     component: kube-scheduler
@@ -36,7 +36,7 @@ spec:
     kind: Endpoints
     metadata:
       labels:
-        k8s-app: kube-controller-manager
+        app.kubernetes.io/name: kube-controller-manager
       name: kube-controller-manager
       namespace: kube-system
     subsets:
@@ -51,7 +51,7 @@ spec:
     kind: Endpoints
     metadata:
       labels:
-        k8s-app: kube-scheduler
+        app.kubernetes.io/name: kube-scheduler
       name: kube-scheduler
       namespace: kube-system
     subsets:
